@@ -61,7 +61,10 @@ function gallery_styles() {
 	/* Output $galleryscript as text for our web pages: */
 	echo($galleryscript);
 }
-
+/* TODO:  Lots of optimization required in this function.  Remove
+	backwards compatability if/else's and employ a switch statement
+	to reduce processing time.	
+*/
 function get_a_post($id='GETPOST') {
 	global $post, $tableposts, $tablepostmeta, $wp_version, $wpdb;
 
@@ -112,7 +115,7 @@ function get_a_post($id='GETPOST') {
 		setup_postdata($post);
 }
 
-/* we want to add the above xhtml to the header of our pages: */
+/* Add required hooks: */
 add_action('wp_head', 'gallery_styles');
 add_action('admin_menu', 'gallery_options_page');
 ?>
