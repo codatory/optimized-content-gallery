@@ -1,16 +1,16 @@
 <?php
 /*
 Plugin Name: Optimized Content Gallery
-Plugin URI: http://alxconn.com/dev/ocg
+Plugin URI: http://github.com/alxconn/optimized-content-gallery
 Description: Used to create a customizable rotating image gallery anywhere within your WordPress site. <a href="http://www.featuredcontentgallery.com" target="_blank">FeaturedContentGallery.com</a>: plugin page, instructions, gallery and support.
 Version: 0.1
 Author: alxconn
-Author URI: http://www.alxconn.com
+Author URI: http://www.indygeek.net
 */
 
-/*  Copyright 2010 alxconn (email : alex@alxconn.com)
+/*  Updated by IndyGeek.net Dev Team
 
-	Some portions
+	Original Plugin
 	Copyright 2009  iePlexus  (email : info@ieplexus.com)
 
     This program is free software; you can redistribute it and/or modify
