@@ -35,8 +35,6 @@ function gallery_options_page() {
 	add_options_page('Optimized Content Gallery Options', 'Optimized Content Gallery', 10, 'Optimized-content-gallery/options.php');
 }
 
-add_action('wp_print_styles', 'add_frontend_dependencies');
-
 function add_frontend_dependencies() {
 	$gallery_path =  get_bloginfo('wpurl')."/wp-content/plugins/optimized-content-gallery/";
 	
@@ -118,4 +116,5 @@ function get_a_post($id='GETPOST') {
 /* Add required hooks: */
 add_action('wp_head', 'gallery_styles');
 add_action('admin_menu', 'gallery_options_page');
+add_action('wp_print_styles', 'add_frontend_dependencies');
 ?>
