@@ -114,8 +114,8 @@ function get_a_post($id='GETPOST') {
 }
 /* Grab some variables for below */
 
-$width = get_option(gallery-width);
-$height = get_option(gallery-height);
+$width = get_option('gallery-width');
+$height = get_option('gallery-height');
 
 
 /* Add required hooks: */
