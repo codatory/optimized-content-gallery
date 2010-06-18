@@ -123,5 +123,5 @@ add_action('wp_head', 'gallery_styles');
 add_action('admin_menu', 'gallery_options_page');
 add_action('wp_print_styles', 'add_frontend_dependencies');
 add_theme_support( 'post-thumbnails' );
-add_image_size( 'single-post-thumbnail', $width, $height);
+add_image_size( 'gallery-image-file', $width, $height);
 ?>
