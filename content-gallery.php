@@ -112,9 +112,16 @@ function get_a_post($id='GETPOST') {
 	else
 		setup_postdata($post);
 }
+/* Grab some variables for below */
+
+$width = get_option(gallery-width);
+$height = get_option(gallery-height);
+
 
 /* Add required hooks: */
 add_action('wp_head', 'gallery_styles');
 add_action('admin_menu', 'gallery_options_page');
 add_action('wp_print_styles', 'add_frontend_dependencies');
+add_theme_support( 'post-thumbnails' );
+add_image_size( 'single-post-thumbnail', $width, $height);
 ?>
