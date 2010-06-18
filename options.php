@@ -3,14 +3,13 @@ $location = $options_page; // Form Action URI
 ?>
 
 <div class="wrap">
-	<h2>Featured Content Gallery Configuration</h2>
-	<p>Use the options below to select the content for your gallery, to style your gallery, and to configure the gallery slides and transitions.<br /> 
-    Visit the <a href="http://www.featuredcontentgallery.com">Featured Content Gallery Plugin</a> website for more information.</p>
+	<h2>Optimized Content Gallery Configuration</h2>
+	<p>Use the options below to select the content for your gallery, to style your gallery, and to configure the gallery slides and transitions.</p>
         <form method="post" action="options.php"><?php wp_nonce_field('update-options'); ?>
 		<fieldset name="general_options" class="options">
         <div style="padding-top: 15px"></div>
-        <u><strong>Featured Content Gallery Code</strong></u> - If not already included, add this code to your template file where you want the Featured Content Gallery to be displayed:<br />
-        <blockquote>&lt;&#63;php include &#40;ABSPATH &#46; '/wp-content/plugins/featured-content-gallery/gallery.php'&#41;&#59; &#63;&#62;</blockquote>
+        <u><strong>Optimized Content Gallery Code</strong></u> - If not already included, add this code to your template file where you want the Content Gallery to be displayed:<br />
+        <blockquote>&lt;&#63;php include &#40;ABSPATH &#46; '/wp-content/plugins/optimized-content-gallery/gallery.php'&#41;&#59; &#63;&#62;</blockquote>
         <div style="padding-top: 10px"></div>
         <?php  $galleryoldway = (get_option('gallery-way') == 'old' || get_option('gallery-way') == '') ? "checked" : ""; 
         		   $gallerynewway = get_option('gallery-way') == 'new' ? "checked" : ""; 
@@ -160,13 +159,11 @@ $location = $options_page; // Form Action URI
 		You can also add alt text to your gallery images with a custom field.<br />
         Key: <strong>alttext</strong> - Insert the alt text in the value.
         <div style="padding-top: 15px"></div>
-        For more information, please visit the <a href="http://www.featuredcontentgallery.com/install-setup">Featured Content Gallery Install & Setup</a> page.
                         
         <input type="hidden" name="action" value="update" />
         <input type="hidden" name="page_options" value="gallery-width,gallery-height,gallery-info,gallery-items,gallery-border-color,gallery-bg-color,gallery-text-color,gallery-use-featured-content,gallery-use-thumb-image,gallery-way,gallery-items-pages,gallery-category,gallery-fcg-button,gallery-fade-duration,gallery-delay,gallery-randomize-pages,gallery-rss-word-quantity,gallery-default-transaction" />
 
 		</fieldset>
 		<p class="submit"><input type="submit" name="Submit" value="<?php _e('Update Options') ?>" /></p>
-        <p><em>Featured Content Gallery WordPress Plugin v3.2.0 by <a href="http://www.ieplexus.com">iePlexus</a></em></p>
 	</form>      
 </div>
