@@ -11,7 +11,7 @@ Clone of iePlexus' brilliant Featured Content Gallery optimized for Wordpress 3.
 
 == Description ==
 
-TODO
+Optimized Content Gallery is a fork of iePlexus' brilliant Featured Content Gallery that has been optimized for Wordpress 3.0 for performance and ease of use.
 
 == Installation ==
 
