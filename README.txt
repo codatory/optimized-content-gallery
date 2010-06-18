@@ -1,6 +1,6 @@
 === Optimized Content Gallery ===
 Plugin Author: alxconn
-Contributors: iePlexus, alxconn
+Contributors: iePlexus, alxconn, bdicicco
 Donate link: No Thanks
 Tags: images, gallery, slideshow, photos, page, post, featured, plugin
 Requires at least: 3.0
