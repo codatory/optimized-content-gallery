@@ -35,16 +35,24 @@ function gallery_options_page() {
 	add_options_page('Optimized Content Gallery Options', 'Optimized Content Gallery', 10, 'Optimized-content-gallery/options.php');
 }
 
+add_action('wp_print_styles', 'add_frontend_dependencies');
+
+function add_frontend_dependencies() {
+	$gallery_path =  get_bloginfo('wpurl')."/wp-content/plugins/optimized-content-gallery/";
+	
+	wp_enqueue_style( jd_gallery_dyn, $gallery_path."css/jd.gallery.css.php", null ,1, screen );
+	wp_enqueue_style( jd_gallery, $gallery_path."css/jd.gallery.css", jd_gallery_dyn ,1, screen );
+}
 function gallery_styles() {
     /* The next lines figures out where the javascripts and images and CSS are installed,
     relative to your wordpress server's root: */
     $gallery_path =  get_bloginfo('wpurl')."/wp-content/plugins/optimized-content-gallery/";
 
-    /* The xhtml header code needed for gallery to work: */
+
+	
+    /* This method of adding scripts is depreciated and unreliable, transitioning to wp_enqueue_scripts and wp_enqueue_styles: */
 	$galleryscript = "
 	<!-- begin gallery scripts -->
-    <link rel=\"stylesheet\" href=\"".$gallery_path."css/jd.gallery.css.php\" type=\"text/css\" media=\"screen\" charset=\"utf-8\"/>
-	<link rel=\"stylesheet\" href=\"".$gallery_path."css/jd.gallery.css\" type=\"text/css\" media=\"screen\" charset=\"utf-8\"/>
 	<script type=\"text/javascript\" src=\"".$gallery_path."scripts/mootools.v1.11.js\"></script>
 	<script type=\"text/javascript\" src=\"".$gallery_path."scripts/jd.gallery.js.php\"></script>
 	<script type=\"text/javascript\" src=\"".$gallery_path."scripts/jd.gallery.transitions.js\"></script>
