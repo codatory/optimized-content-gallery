@@ -39,10 +39,19 @@
 					     <p><?php the_content_rss('', 0, '', $wordquantity); ?></p>
 					  <?php
 						}
+						/* Grab some variables for below */
+						$width = get_option('gallery-width');
+						$height = get_option('gallery-height');
 						?>
-					  <a href="<?php the_permalink() ?>" title="Read More" class="open"></a>
-					  <img src="<?php $key="articleimg"; echo get_post_meta($post->ID, $key, true); ?>" alt="<?php $key="alttext"; echo get_post_meta($post->ID, $key, true); ?>" class="full" />
-					  <img src="<?php $key=$imgthumb; echo get_post_meta($post->ID, $key, true); ?>" alt="<?php $key="alttext"; echo get_post_meta($post->ID, $key, true); ?>" class="thumbnail" />
+						<?php 
+							the_post_thumbnail(array($width,$height), array('class' => 'full')); 
+						?>
+						
+						<a href="<?php the_permalink() ?>" title="Read More" class="open"></a>
+						
+						<?php
+							the_post_thumbnail(array($width,$height), array('class' => 'thumbnail'));
+						?>
 				  </div>
 			 <?php 
 			 } ?>
