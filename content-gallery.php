@@ -2,7 +2,7 @@
 /*
 Plugin Name: Optimized Content Gallery
 Plugin URI: http://github.com/alxconn/optimized-content-gallery
-Description: Used to create a customizable rotating image gallery anywhere within your WordPress site. <a href="http://www.featuredcontentgallery.com" target="_blank">FeaturedContentGallery.com</a>: plugin page, instructions, gallery and support.
+Description: Used to create a customizable rotating image gallery anywhere within your WordPress site.
 Version: 0.1
 Author: alxconn
 Author URI: http://www.indygeek.net
